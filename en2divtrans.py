@@ -42,9 +42,7 @@ def ReadXY(training_file, max_word_len=hp.max_seq_len):
     f.close()
 
     x = np.reshape(x, (len(x), max_word_len))
-    print('x-shape', x.shape)
     y = np.reshape(y, (len(y), max_word_len, len(target_line)))
-    print('y-shape', y.shape)
     return x, y, source_line, target_line
 
 def TrainModel(model_name):
