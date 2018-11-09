@@ -7,7 +7,7 @@ class Hyperparams:
 
 	hidden = 128
 	max_seq_len = 35
-	epoch = 3
+	epoch = 30
 	batch = 128
 	char_emb_dim = 64
 
