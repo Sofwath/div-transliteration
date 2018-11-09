@@ -6,11 +6,9 @@ from pyvirtualdisplay import Display
 import pandas as pd
 
 class AvasSpider():
-
 	def __init__(self):
 		self.url_to_crawl = "https://avas.com/"
 		self.file = open("avas.csv","w") 
-
 
 	def start_driver(self):
 		print('starting driver...')
@@ -33,9 +31,7 @@ class AvasSpider():
 		print('getting page...')
 		self.driver.get(url)
 
-	def grab_list_items(self):
-
-		
+	def grab_list_items(self):		
 		latintitle = self.driver.title
 		title = self.driver.find_elements_by_xpath("/html/body[@class='theme-default font-sans antialiased ']/div[@id='app']/div[@class='rtl container mx-auto mb-7 mt-8 px-4 md:px-0']/h1[@class='font-waheed font-normal text-5xl leading-normal mb-2 text-default']")
 		try: 
@@ -48,8 +44,6 @@ class AvasSpider():
 		except:
 			print ("...... err")
 		
-		
-
 	def parse(self):
 		self.start_driver()
 		mainurl="https://avas.mv/"
@@ -65,5 +59,5 @@ class AvasSpider():
 		
 		self.close_driver()
 
-Mihaaru = AvasSpider()
-Mihaaru.parse()
+Avas = AvasSpider()
+Avas.parse()
